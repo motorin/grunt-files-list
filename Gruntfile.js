@@ -32,18 +32,11 @@ module.exports = function(grunt) {
     files_list: {
       default_options: {
         options: {
+          pathPrefix: "/js/",
+          pathSuffix: "?verion=0.1"
         },
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123'],
-        },
-      },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!',
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123'],
+          'tmp/default_options.html': ['tasks/*.js', '*.js'],
         },
       },
     },
