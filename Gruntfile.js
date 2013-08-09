@@ -35,9 +35,9 @@ module.exports = function(grunt) {
           pathPrefix: "/js/",
           pathSuffix: "?verion=0.1"
         },
-        files: {
-          'tmp/default_options.html': ['tasks/*.js', '*.js'],
-        },
+        cwd: "tasks/",
+        src: ['*.js'],
+        dest: 'tmp/default_options.html'
       },
     },
 
