@@ -31,8 +31,8 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     files_list: {
       defaultOptions: {
-        cwd: "tasks/",
-        src: ['*.js'],
+        cwd: "test/fixtures/",
+        src: ['*.js','*.css'],
         dest: 'tmp/defaultOptions.html'
       },
       withPrefixAndSuffux: {
@@ -40,9 +40,9 @@ module.exports = function(grunt) {
           pathPrefix: "/js/",
           pathSuffix: "?verion=0.1"
         },
-        cwd: "tasks/",
-        src: ['*.js'],
-        dest: 'tmp/withPrefixAndSuffux.html'
+        cwd: "test/fixtures/",
+        src: ['*.js','*.css'],
+        dest: 'tmp/withPrefixAndSuffix.html'
       },
     },
 

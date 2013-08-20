@@ -30,18 +30,18 @@ exports.files_list = {
   default_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options');
-    var expected = grunt.file.read('test/expected/default_options');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+    var actual = grunt.file.read('tmp/defaultOptions.html');
+    var expected = grunt.file.read('test/expected/defaultOptions.html');
+    test.equal(actual, expected, 'result files with defaultOptions builded correctly.');
 
     test.done();
   },
   custom_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/custom_options');
-    var expected = grunt.file.read('test/expected/custom_options');
-    test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
+    var actual = grunt.file.read('tmp/withPrefixAndSuffix.html');
+    var expected = grunt.file.read('test/expected/withPrefixAndSuffix.html');
+    test.equal(actual, expected, 'result files with prefix and suffix options builded correctly.');
 
     test.done();
   },
