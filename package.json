@@ -1,7 +1,7 @@
 {
   "name": "grunt-files-list",
-  "description": "Create files list in for jincluding in HTML",
-  "version": "0.1.1",
+  "description": "Create templated list of files",
+  "version": "0.1.2",
   "homepage": "https://github.com/motorin/grunt-files-list",
   "author": {
     "name": "Motorin",
