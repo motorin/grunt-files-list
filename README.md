@@ -1,6 +1,6 @@
 # grunt-files-list
 
-> Create files list in for jincluding in HTML
+> Create templated list of files
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -37,46 +37,47 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
+#### options.pathPrefix
 Type: `String`
-Default value: `',  '`
+Default value: ``
 
-A string value that is used to do something with whatever.
+A string value that is used to prefix the filepath.
 
-#### options.punctuation
+#### options.pathSuffix
 Type: `String`
-Default value: `'.'`
+Default value: ``
 
-A string value that is used to do something else with whatever else.
+A string value that is used to suffix the filepath. Some get parameters for example.
 
 ### Usage Examples
 
 #### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+In this example, the default options are used to do something with whatever. So it just output file with HTML-tags within. Tags corresponds to file extension: `.js => <script>` and `.css => <link>`. So, `src/first.js` will be `<script src="src/first.js"></script>`
 
 ```js
 grunt.initConfig({
   files_list: {
     options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/filelist.html': ['src/first.js', 'src/second.js'],
     },
   },
 })
 ```
 
+
 #### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+In this example, custom options are used prefix and suffix the filepath. So, `src/first.js` will be `<script src="/js/src/first.js?version=0.1"></script>`
 
 ```js
 grunt.initConfig({
   files_list: {
     options: {
-      separator: ': ',
-      punctuation: ' !!!',
+      pathPrefix: "/js/",
+      pathSuffix: "?verion=0.1"
     },
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/filelist.html': ['src/first.js', 'src/second.js'],
     },
   },
 })
