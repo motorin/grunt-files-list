@@ -39,7 +39,7 @@ module.exports = function(grunt) {
       var src = f.src.filter(function(filepath) {
         var fullPath = filepath;
         if( f.cwd ){
-            fullPath = f.cwd + filepath
+            fullPath = f.cwd + filepath;
         }
         // Warn on and remove invalid source files (if nonull was set).
         if (!grunt.file.exists(fullPath)) {
@@ -54,16 +54,14 @@ module.exports = function(grunt) {
         switch(path.extname(filepath)){
           case ".js":
             return _.template(options.jsTemplate, {filename: filepath, pathPrefix: options.pathPrefix, pathSuffix: options.pathSuffix});
-            break;
           case ".css":
             return _.template(options.cssTemplate, {filename: filepath,pathPrefix: options.pathPrefix, pathSuffix: options.pathSuffix});
-            break;
           default:
             filesCounter--;
             grunt.log.warn('Unrecognized file extension: ' + path.extname(filepath) + '. Must be .js or .css');
             return "";
         }
-      }).join(grunt.util.normalizelf(options.separator));;
+      }).join(grunt.util.normalizelf(options.separator));
 
       // src += options.punctuation;
       targetFile = f.dest;
