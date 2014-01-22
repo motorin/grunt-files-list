@@ -30,8 +30,6 @@ module.exports = function(grunt) {
       separator: '\r\n'
     });
 
-    var outputHTML = "";
-    var targetFile = "";
     var filesCounter = 0;
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
@@ -64,15 +62,13 @@ module.exports = function(grunt) {
       }).join(grunt.util.normalizelf(options.separator));
 
       // src += options.punctuation;
-      targetFile = f.dest;
-      outputHTML = src;
+      // Write the destination file.
+      grunt.file.write(f.dest, src);
+      grunt.log.writeln('File "' + f.dest + '" created.');
     });
-    // Write the destination file.
-    grunt.file.write(targetFile, outputHTML);
 
     // Print a success message.
     grunt.log.writeln('Result script/link tags: ' + filesCounter + '.');
-    grunt.log.writeln('File "' + targetFile + '" created.');
 
   });
 
