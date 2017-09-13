@@ -1,7 +1,7 @@
 {
   "name": "grunt-files-list",
   "description": "Create templated list of files",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "homepage": "https://github.com/motorin/grunt-files-list",
   "author": {
     "name": "Motorin",
@@ -28,13 +28,13 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt": "~0.4.1"
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-contrib-clean": "~1.1.0",
+    "grunt-contrib-nodeunit": "~1.0.0",
+    "grunt": "~1.0.1"
   },
   "peerDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~1.0.1"
   },
   "keywords": [
     "gruntplugin",

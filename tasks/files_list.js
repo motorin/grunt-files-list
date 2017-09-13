@@ -12,8 +12,6 @@
 
 module.exports = function(grunt) {
 
-  // Link to Underscore.js
-  var _ = grunt.util._;
   var path = require('path');
 
   // Please see the Grunt documentation for more information regarding task
@@ -51,9 +49,9 @@ module.exports = function(grunt) {
         filesCounter++;
         switch(path.extname(filepath)){
           case ".js":
-            return _.template(options.jsTemplate, {filename: filepath, pathPrefix: options.pathPrefix, pathSuffix: options.pathSuffix});
+            return grunt.template.process(options.jsTemplate, {data:{filename: filepath, pathPrefix: options.pathPrefix, pathSuffix: options.pathSuffix}});
           case ".css":
-            return _.template(options.cssTemplate, {filename: filepath,pathPrefix: options.pathPrefix, pathSuffix: options.pathSuffix});
+            return grunt.template.process(options.cssTemplate, {data:{filename: filepath,pathPrefix: options.pathPrefix, pathSuffix: options.pathSuffix}});
           default:
             filesCounter--;
             grunt.log.warn('Unrecognized file extension: ' + path.extname(filepath) + '. Must be .js or .css');
