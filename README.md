@@ -8,13 +8,13 @@ This plugin requires Grunt `~1.0.1`
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
 ```shell
-npm install grunt-files-list --save-dev
+npm install grunt-files-list2 --save-dev
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
-grunt.loadNpmTasks('grunt-files-list');
+grunt.loadNpmTasks('grunt-files-list2');
 ```
 
 ## The "files_list" task
@@ -88,7 +88,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
-* 2017-09-13   v0.2.0   Compatibility with Grunt 1.0.1
+* 2017-09-13   v0.2.0   Compatibility with Grunt 1.0.1, and rename package to grunt-file-list2
 * 2014-01-22   v0.1.3   Fixed issue when several destination files are indicated
 * 2013-08-20   v0.1.2   First stable version
 
