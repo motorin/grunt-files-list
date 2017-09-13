@@ -1,23 +1,23 @@
 {
-  "name": "grunt-files-list",
+  "name": "grunt-files-list2",
   "description": "Create templated list of files",
-  "version": "0.1.2",
-  "homepage": "https://github.com/motorin/grunt-files-list",
+  "version": "0.2.0",
+  "homepage": "https://github.com/laurentj/grunt-files-list2",
   "author": {
     "name": "Motorin",
     "email": "pavel.motorin@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/motorin/grunt-files-list.git"
+    "url": "git://github.com/laurentj/grunt-files-list2.git"
   },
   "bugs": {
-    "url": "https://github.com/motorin/grunt-files-list/issues"
+    "url": "https://github.com/laurentj/grunt-files-list2/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/motorin/grunt-files-list/blob/master/LICENSE-MIT"
+      "url": "https://github.com/laurentj/grunt-files-list2/blob/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
@@ -28,13 +28,13 @@
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt": "~0.4.1"
+    "grunt-contrib-jshint": "~1.1.0",
+    "grunt-contrib-clean": "~1.1.0",
+    "grunt-contrib-nodeunit": "~1.0.0",
+    "grunt": "~1.0.1"
   },
   "peerDependencies": {
-    "grunt": "~0.4.1"
+    "grunt": "~1.0.1"
   },
   "keywords": [
     "gruntplugin",

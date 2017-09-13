@@ -44,6 +44,14 @@ module.exports = function(grunt) {
         src: ['*.js','*.css'],
         dest: 'tmp/withPrefixAndSuffix.html'
       },
+      // we want to generates several files at the same time
+      severalFiles : {
+        files : [
+            { cwd: "test/fixtures/", src: ['first.js','first.css'], dest: 'tmp/first.html'},
+            { cwd: "test/fixtures/", src: ['second.js','second.css'], dest: 'tmp/second.html'},
+        ]
+
+      }
     },
 
     // Unit tests.

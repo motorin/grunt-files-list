@@ -45,4 +45,16 @@ exports.files_list = {
 
     test.done();
   },
+  several_files: function(test) {
+    test.expect(2);
+
+    var actual = grunt.file.read('tmp/first.html');
+    var expected = grunt.file.read('test/expected/first.html');
+    test.equal(actual, expected, 'first generated file is ok');
+
+    actual = grunt.file.read('tmp/second.html');
+    expected = grunt.file.read('test/expected/second.html');
+    test.equal(actual, expected, 'second generated file is ok');
+    test.done();
+  },
 };
