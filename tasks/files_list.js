@@ -53,9 +53,9 @@ module.exports = function(grunt) {
         filesCounter++;
         switch(path.extname(filepath)){
           case ".js":
-            return _.template(options.jsTemplate, {filename: filepath, pathPrefix: options.pathPrefix, pathSuffix: options.pathSuffix});
+            return _.template(options.jsTemplate)({filename: filepath, pathPrefix: options.pathPrefix, pathSuffix: options.pathSuffix});
           case ".css":
-            return _.template(options.cssTemplate, {filename: filepath,pathPrefix: options.pathPrefix, pathSuffix: options.pathSuffix});
+            return _.template(options.cssTemplate)({filename: filepath,pathPrefix: options.pathPrefix, pathSuffix: options.pathSuffix});
           default:
             filesCounter--;
             grunt.log.warn('Unrecognized file extension: ' + path.extname(filepath) + '. Must be .js or .css');
